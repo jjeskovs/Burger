@@ -1,0 +1,46 @@
+/* Burger background image*/
+#header {
+  text-align: center;
+  background-color: grey;
+  border-radius: 5px;
+  height: 300px;
+  padding-top: 75px;
+  margin-bottom:25px;
+  background-image: url("assets/images/nightmare-king-burger.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+#devoured-card-header  {
+  background-color: #76180c;
+}
+
+
+.devoured-burger-name {
+  color: #76180c;
+}
+
+
+body {
+  font-family: 'Righteous', cursive;
+}
+
+.lead {
+  font-size: 24px;
+}
+
+.devoured-card, .footer {  
+  border-style: solid;
+  border-color: #76180c;
+}
+
+h1 {
+  color: black;
+}
+footer {
+  background-color: grey;
+  margin-bottom: 0px;
+  border-radius: 5px;
+  font-family: 'Long Cang', cursive;
+  font-size: 25px;
+}

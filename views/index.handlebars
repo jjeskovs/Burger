@@ -1,0 +1,78 @@
+<div class="container">
+  <!--Jumbotron-->
+  {{!-- class="jumbotron text-center bg-primary text-white" --}}
+  <div id = "header"> 
+    <h1 class="display-4" id="app-title">Chucky's Burger</h1>
+    <p class="lead">Whatever you like, as long as it is bloody</p>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card border border-dark">
+        <div class="card-header bg-dark text-white">
+         Type what you want?
+        </div>
+        <!--Create/add burger form-->
+        <div class="card-body">
+          <form class="create-form">
+            <div class="form-group">
+              <label for="burger">If you dare:</label>
+              <input type="text" class="form-control" id="burgerToGo" placeholder="">
+            </div>
+            <button class="btn btn-dark" type="submit">Place order</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row mt-4">
+    <div class="col-md-6 mt-4">
+      <div class="card border border-primary">
+        <div class="card-header bg-dark text-white">
+         Burgers
+        </div>
+        <!--Div to hold burgers that have not been devoured yet-->
+        <div class="card-body">
+              {{#each burgers}}
+                {{#unless devoured}}
+                  {{> burgers/burger-block devour=false}}
+                {{/unless}}
+              {{/each}}
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mt-4">
+      <div class="card devoured-card">
+        <div class="card-header text-white" id="devoured-card-header">
+         Devoured burgers
+        </div>
+        <!--When a burger has been devoured, put burger here-->
+        <div class="card-body">
+          {{#each burgers}}
+              {{#if devoured}}
+                {{> burgers/burger-devoured devour=true}}
+              {{/if}}
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+<footer>
+      <div class="container my-5 mb-0 shadow-lg p-3 mb-5 bg-white rounded">
+       
+        <span> | </span>
+        <a> Jegors Jeskovs </a> 
+        <span> | </span>
+      <a class="sources" href="https://github.com/jjeskovs/Burger"
+          >GitHub Repo</a>
+
+        <span> | </span>
+
+      
+      </div>
+    </footer>
