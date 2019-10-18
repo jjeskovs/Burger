@@ -1,6 +1,6 @@
 <div class="container">
   <!--Jumbotron-->
-  {{!-- class="jumbotron text-center bg-primary text-white" --}}
+
   <div id = "header"> 
     <h1 class="display-4" id="app-title">Chucky's Burger</h1>
     <p class="lead">Whatever you like, as long as it is bloody</p>
@@ -13,7 +13,8 @@
         <div class="card-header bg-dark text-white">
          Type what you want?
         </div>
-        <!--Create/add burger form-->
+
+        <!--Add burger div-->
         <div class="card-body">
           <form class="create-form">
             <div class="form-group">
@@ -30,12 +31,13 @@
 
   <div class="row mt-4">
     <div class="col-md-6 mt-4">
-      <div class="card border border-primary">
+      <div class="card border-primary">
         <div class="card-header bg-dark text-white">
          Burgers
         </div>
-        <!--Div to hold burgers that have not been devoured yet-->
-        <div class="card-body">
+
+        <!--Div of available burgers-->
+        <div id = "devour" class="card-body">
               {{#each burgers}}
                 {{#unless devoured}}
                   {{> burgers/burger-block devour=false}}
@@ -50,7 +52,8 @@
         <div class="card-header text-white" id="devoured-card-header">
          Devoured burgers
         </div>
-        <!--When a burger has been devoured, put burger here-->
+
+        <!--Div with Chucky-->
         <div class="card-body">
           {{#each burgers}}
               {{#if devoured}}
